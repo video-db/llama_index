@@ -1,4 +1,4 @@
-from llama_index.readers.videodb.base import VideoDBReader, post
+from llama_index.readers.videodb.base import VideoDBReader
 
 
-__all__ = ["VideoDBReader", "post"]
+__all__ = ["VideoDBReader"]
