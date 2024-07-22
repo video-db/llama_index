@@ -1,4 +1,5 @@
 """Sentence splitter."""
+
 from dataclasses import dataclass
 from typing import Callable, List, Optional, Tuple
 
@@ -30,7 +31,8 @@ class _Split:
 
 
 class SentenceSplitter(MetadataAwareTextSplitter):
-    """Parse text with a preference for complete sentences.
+    """
+    Parse text with a preference for complete sentences.
 
     In general, this class tries to keep sentences and paragraphs together. Therefore
     compared to the original TokenTextSplitter, there are less likely to be
@@ -189,7 +191,8 @@ class SentenceSplitter(MetadataAwareTextSplitter):
         return chunks
 
     def _split(self, text: str, chunk_size: int) -> List[_Split]:
-        r"""Break text into splits that are smaller than chunk size.
+        r"""
+        Break text into splits that are smaller than chunk size.
 
         The order of splitting is:
         1. split by paragraph separator
@@ -287,7 +290,8 @@ class SentenceSplitter(MetadataAwareTextSplitter):
         return self._postprocess_chunks(chunks)
 
     def _postprocess_chunks(self, chunks: List[str]) -> List[str]:
-        """Post-process chunks.
+        """
+        Post-process chunks.
         Remove whitespace only chunks and remove leading and trailing whitespace.
         """
         new_chunks = []
